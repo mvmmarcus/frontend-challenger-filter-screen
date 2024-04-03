@@ -51,8 +51,8 @@ export function FilterPage() {
   const [searchFilter, setSearchFilter] = useState('');
   const [selectedFilterColor, setSelectedFilterColor] = useState('');
   const [priceRangeFilter, setPriceRangeFilter] = useState({
-    min: 0,
-    max: 100,
+    min: 20,
+    max: 80,
   });
 
   const handleResetAllFilters = () => {
