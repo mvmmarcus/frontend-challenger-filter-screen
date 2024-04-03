@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Roboto', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .price-range-input-bg {
+    background-color: #faf1e6;
+    opacity: 1;
+    background-image: linear-gradient(
+      to right,
+      #ff9a24,
+      #ff9a24 2px,
+      #faf1e6 2px,
+      #faf1e6
+    );
+    background-size: 4px 100%;
+  }
+
+  .price-range-input-composite {
+    background-color: #faf1e6;
+    mask-image: url(/src/assets/price-range-bg.svg);
+    mask-size: 100%, 100%;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-composite: exclude;
+    mask-position: 0 0;
+  }
+}
+
+input[type='range'] {
+  outline: none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  position: relative;
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  border: 2px solid;
+  @apply border-colors-border-orange;
+  @apply bg-white;
+}
