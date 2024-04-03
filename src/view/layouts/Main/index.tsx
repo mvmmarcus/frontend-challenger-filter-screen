@@ -1,8 +1,8 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 
 export function MainLayout() {
   return (
-    <div className="flex w-screen h-screen">
+    <div className="flex min-w-screen min-h-screen bg-white">
       <Outlet />
     </div>
   );
