@@ -21,7 +21,8 @@ export function Accordion({
   return (
     <div className="flex flex-col transition-all">
       <header
-        className="flex items-center cursor-pointer justify-between p-5 hover:bg-colors-bg-grey"
+        role="button"
+        className="flex items-center  justify-between p-5 hover:bg-colors-bg-grey"
         onClick={toggleCollapsed}
       >
         <p className="text-colors-text-blue font-medium text-base mr-2">

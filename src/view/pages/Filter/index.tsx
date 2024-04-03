@@ -91,6 +91,7 @@ export function FilterPage() {
             </Button>
           </div>
           <Input
+            data-testid="search-input"
             name="search"
             placeholder="Search"
             icon={<SearchIcon />}

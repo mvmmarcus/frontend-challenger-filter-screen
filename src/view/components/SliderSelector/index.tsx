@@ -30,22 +30,12 @@ export function SliderSelector({
         setMinValue(Number(event.target.value));
         onChange(Number(event.target.value), maxValue);
       }
-    } else {
-      if (Number(event.target.value) < minValue) {
-        setMinValue(Number(event.target.value));
-        onChange(Number(event.target.value), maxValue);
-      }
     }
   };
 
   const handleMaxValue = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (maxValue - minValue >= priceCap && maxValue <= max) {
       if (Number(event.target.value) > minValue) {
-        setMaxValue(Number(event.target.value));
-        onChange(minValue, Number(event.target.value));
-      }
-    } else {
-      if (Number(event.target.value) > maxValue) {
         setMaxValue(Number(event.target.value));
         onChange(minValue, Number(event.target.value));
       }
@@ -90,6 +80,7 @@ export function SliderSelector({
         </div>
         <div className="range-input relative">
           <input
+            data-testid="input-range-min"
             onChange={handleMinValue}
             type="range"
             value={minValue}
@@ -99,6 +90,7 @@ export function SliderSelector({
             className="range-min absolute w-full -top-1 h-1 bg-transparent appearance-none pointer-events-none"
           />
           <input
+            data-testid="input-range-max"
             onChange={handleMaxValue}
             type="range"
             value={maxValue}
@@ -111,13 +103,19 @@ export function SliderSelector({
 
         <footer className="w-full flex items-center mt-4">
           <div className="flex w-16 h-10 bg-colors-bg-grey rounded-md items-center justify-center">
-            <span className="font-normal text-colors-text-grey text-sm">
+            <span
+              data-testid="slider-min-value"
+              className="font-normal text-colors-text-grey text-sm"
+            >
               {minValue}
             </span>
           </div>
           <div className="flex flex-1 h-0.5 bg-colors-bg-grey mx-3" />
           <div className="flex w-16 h-10 bg-colors-bg-grey rounded-md items-center justify-center">
-            <span className="font-normal text-colors-text-grey text-sm">
+            <span
+              data-testid="slider-max-value"
+              className="font-normal text-colors-text-grey text-sm"
+            >
               {maxValue}
             </span>
           </div>
