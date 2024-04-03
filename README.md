@@ -107,3 +107,21 @@ With this filter the user can filter items by specific range of prices. The item
 - `min` and `max` which will determine the minimum and maximum range of values;
 - `valueMin` and `valueMax` which reflect the range selected by the user;
 - `onChange` which is the callback triggered when the user changes the range of values.
+
+## Run tests
+
+To run unit tests, use the following command:
+
+```bash
+yarn test
+```
+
+![](public/app-presentation-tests.png)
+
+To get coverage, run:
+
+```bash
+yarn coverage
+```
+
+![](public/app-presentation-tests-coverage.png)
