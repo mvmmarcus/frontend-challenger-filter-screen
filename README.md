@@ -2,7 +2,7 @@
 
 React application developed with ![React](https://img.shields.io/badge/-React-05122A?style=flat&logo=react) + ![Vite](https://img.shields.io/badge/-Vite-05122A?style=flat&logo=vite) + ![TypeScript](https://img.shields.io/badge/-Typescript-05122A?style=flat&logo=typescript) + ![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-05122A?style=flat&logo=tailwind-css)
 
-### Go to [Live site](https://promo-movies.netlify.app)
+### Go to [Live site](https://frontend-challenger-filter-screen.vercel.app/)
 
 ![](public/app-presentation.gif)
 
