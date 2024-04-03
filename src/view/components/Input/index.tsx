@@ -9,7 +9,7 @@ import {
 import { cn } from '../../../app/utils/cn';
 import { CloseIcon } from '../icons/CloseIcon';
 
-interface InputProps extends ComponentProps<'input'> {
+export interface InputProps extends ComponentProps<'input'> {
   name: string;
   icon?: ReactNode;
   onClear?: () => void;

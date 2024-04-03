@@ -22,6 +22,18 @@ yarn dev
 
 A new tab will open on your browser in [http://localhost:5173](http://localhost:5173)
 
+## Run storybook
+
+Run storybook server with following command:
+
+```bash
+yarn storybook
+```
+
+A new tab will open on your browser in [http://localhost:6006/](http://localhost:6006/)
+
+![](public/app-presentation-storybook.png)
+
 ## How to interact with filters
 
 A brief documentation outlining how to interact with the filter functionality

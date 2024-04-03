@@ -24,7 +24,9 @@ export function Accordion({
         className="flex items-center cursor-pointer justify-between p-5 hover:bg-colors-bg-grey"
         onClick={toggleCollapsed}
       >
-        <p className="text-colors-text-blue font-medium text-base">{title}</p>
+        <p className="text-colors-text-blue font-medium text-base mr-2">
+          {title}
+        </p>
         {isAccordionCollapsed ? <ChevronDownIcon /> : <ChevronUpIcon />}
       </header>
       {!isAccordionCollapsed && <div className="px-5 pb-5">{content}</div>}
